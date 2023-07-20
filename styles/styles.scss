@@ -2,6 +2,14 @@
 $MainColor: #fff;
 $secondaryColor: #000;
 
+//mixins
+@mixin text {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    text-decoration: none;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -376,27 +384,22 @@ $secondaryColor: #000;
     margin-bottom: 100px;
 }
 
+.dest-hover:hover{
+    transform: translateY(-15px);
+}
+
 .product__pair {
     display: flex;
    justify-content: space-evenly;
 }
 .product__text{
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    text-decoration: none;
+    @include text;
 }
 .product__price{
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    text-decoration: none;
+    @include text;
 }
 .content__buy{
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    text-decoration: none;
+    @include text;
 }
 .Section__just-jordan {
     font-size: 10px;
@@ -445,10 +448,7 @@ $secondaryColor: #000;
 
 /*botón de conócenos*/
 .content__nos{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
+    @include text;
 }
 .content__link-button {
     font-size: 15px;
@@ -1274,4 +1274,24 @@ $secondaryColor: #000;
 .list-hover:hover{
     color: red;
 }
- 
+
+/*error 404*/
+.body--404{
+    background-image: linear-gradient(to right, #f9d423 0%, #ff4e50 100%);
+}
+.error_message{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 937px;
+    width: 100%;
+}
+.error__h1{
+    font-size: 70px;
+    color: $MainColor;
+}
+.error__text{
+    font-size: 20px;
+    color: $MainColor;
+}
