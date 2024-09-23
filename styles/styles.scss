@@ -31,6 +31,10 @@ $secondaryColor: #000;
     top: 0;
 }
 
+
+.nav-link{
+    color: $secondaryColor;
+}
 .nav {
     display: flex;
     flex-direction: row;
@@ -58,7 +62,6 @@ $secondaryColor: #000;
 .nav__menu__list-options__link {
     text-decoration: none;  
     color:$secondaryColor;
-    font-size: 15px;
 }
 
 .nav__menu__list{
@@ -72,6 +75,7 @@ $secondaryColor: #000;
     width: 150px;
     justify-content: space-around;
 }
+
 
 /*nav responsive*/
 @media (max-width: 1880px){
@@ -405,6 +409,10 @@ $secondaryColor: #000;
     font-size: 10px;
 }
 
+.products__Luc{
+    @include text;
+}
+
 /*boton*/
 .content__button {
     padding: 15px;
@@ -544,6 +552,7 @@ $secondaryColor: #000;
         object-fit: cover;  
     } 
 } 
+
 /*pagina galería*/
 .main--gallery {
     height: 100%;
